@@ -175,7 +175,7 @@ class Synthesis():
 
 S=Synthesis()
 print('\n')
-S.Zr_source=float(input('Zr source (enter 1 for ZrCl\u2084 and 2 for ZrOCl\u2082*8H\u2082O): '))
+S.Zr_source=float(input('Zr source (enter 0 for ZrCl\u2084 and 1 for ZrOCl\u2082*8H\u2082O): '))
 
 S.Zr_mass=float(input('Enter mass of Zr source (mg): '))
 S.BDC_mass=float(input('Enter mass of H\u2082BDC (mg): '))
