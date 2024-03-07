@@ -29,7 +29,7 @@ model_defects.load_model('defects_model.bin')
 
 
 
-Data=pd.read_csv('Syntetic_dataset.csv')
+Data=pd.read_csv('Synthetic_dataset.csv')
 
 
 
