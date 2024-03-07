@@ -152,11 +152,11 @@ def dif_check(x):
     
     flag=False
     
-    if x[0]>75:
+    if x[0]>50:
         flag=True
-    if x[1]>69:
+    if x[1]>30:
         flag=True
-    if x[2]>0.24:
+    if x[2]>0.1:
         flag=True
         
     return flag
