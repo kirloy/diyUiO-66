@@ -190,7 +190,7 @@ class founder():
         
         self.start=[(max([0.01,self.zero['[Zr], M'].to_numpy()[0]*0.7]),min([self.zero['[Zr], M'].to_numpy()[0]*1.3,0.2])),
                     (max([self.zero['[BDC], M'].to_numpy()[0]*0.7,0.01]),min([self.zero['[BDC], M'].to_numpy()[0]*1.3,0.3])),
-                    (self.zero['[Mod],M'].to_numpy()[0]*0.7,min([self.zero['[Mod],M'].to_numpy()[0]*1.3,700])),
+                    (self.zero['[Mod],M'].to_numpy()[0]*0.7,min([self.zero['[Mod],M'].to_numpy()[0]*1.3+0.1,700])),
                     (self.zero['[H$_2$O]:[Zr] ratio'].to_numpy()[0]*0.7,self.zero['[H$_2$O]:[Zr] ratio'].to_numpy()[0]+10),
                     (self.zero['Aging, h'].to_numpy()[0]*0.7,self.zero['Aging, h'].to_numpy()[0]*1.3),
                     (max([self.zero['T, $^o$C'].to_numpy()[0]*0.7,50]),min([self.zero['T, $^o$C'].to_numpy()[0]*1.3,220])),
@@ -220,7 +220,7 @@ class founder():
         print('[BDC], M:', self.zero['[BDC], M'].to_numpy()[0])
     
         print('Modulator: ', self.md.to_numpy()[0])
-        print('[Mod]:[Zr] ratio:', self.zero['[Mod],M'].to_numpy()[0])
+        print('[Mod]:[Zr] ratio:', round(self.zero['[Mod],M'].to_numpy()[0]))
         print('[H2O]:[Zr] ratio:', self.zero['[H$_2$O]:[Zr] ratio'].to_numpy()[0])
     
         print('Aging, h:', self.zero['Aging, h'].to_numpy()[0])
