@@ -270,14 +270,14 @@ def Found_synthesis(x):
     S.zero_visual()
     
     
-    if dif_check(S.dif):
-        print('')
-        print('Try to optimize:')
-        print('')
+    ###if dif_check(S.dif):
+    print('')
+    print('Try to optimize:')
+    print('')
         
         
-        S.poisk()
-        result=S.result
+    S.poisk()
+    result=S.result
         
         if S.zs:
             source='ZrOCl2*8H2O'
