@@ -26,3 +26,6 @@ Upload the repository files to Jupyter Notebook or open the repository folder in
 The models are trained each time the code is run. To train the models on the new data, it is sufficient to replace the data in the dataset files (Area.csv, Defects.csv, Size.csv).
 
 To reproduce 2D PDP plots and figures with SHAP values, there is also a JupiterNotebook file (Example of 2D PDP curve and SHAP.ipynb). It only works with version 0.2.1 of the pdpbox package.
+
+Folder "Optimized_synthesis" contains the implementation of optimal synthesis conditions search for a desired set of UiO-66 properties. No additional packages are needed to run it.
+Terminal_only.py in Optimized_synthesis can be used to run search in the terminal and Jupyter terminal.ipynb in Optimized_synthesis can be used to run search in the Jupyter Notebook.
