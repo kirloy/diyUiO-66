@@ -183,41 +183,6 @@ class founder():
         
         
     
-            
-    def zero_visual(self):
-        
-        if self.zs:
-            source='ZrOCl2*8H2O'
-        else:
-            source='ZrCl4'
-                
-        ###print(self.start)
-        print( 'Optimal synthesis from literature: ')
-        print('')
-        print ('Zr source: ', source)
-    
-        print ('[Zr], M: ', self.zero['[Zr], M'].to_numpy()[0])
-        print('[BDC], M:', self.zero['[BDC], M'].to_numpy()[0])
-    
-        print('Modulator: ', self.md.to_numpy()[0])
-        print('[Mod]:[Zr] ratio:', round(self.zero['[Mod],M'].to_numpy()[0]))
-        print('[H2O]:[Zr] ratio:', self.zero['[H$_2$O]:[Zr] ratio'].to_numpy()[0])
-    
-        print('Aging, h:', self.zero['Aging, h'].to_numpy()[0])
-        print('Temperature:', self.zero['T, $^o$C'].to_numpy()[0])
-        print('Time: ', self.zero['Time of synthesis, h'].to_numpy()[0])
-    
-        print('Number of DMF washes: ', self.zero['Number of DMF washes'].to_numpy()[0])
-        print('Total number of washes: ', self.zero['Total washes'].to_numpy()[0])
-        print('Activation temperature: ', self.zero['Activation T, $^o$C'].to_numpy()[0])
-        print('Activation time: ', self.zero['Activation time, h'].to_numpy()[0])
-        
-        print('')
-        print('Properties:')
-        print('Area: ',round(self.zero['Area'].to_numpy()[0]), 'm2/g')
-        print('Size: ', round(self.zero['Size'].to_numpy()[0]), 'nm')
-        print('BDC to Zr6 ratio: ', round(self.zero['Defects'].to_numpy()[0],2))
-    
         
             
     def method(self,x):
