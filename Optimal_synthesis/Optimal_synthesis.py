@@ -139,26 +139,6 @@ def x_into_asd(x, Md,ls,zs):
             model_size.predict(object_size)[0],
             model_defects.predict(object_defects)[0]]
     
-    
-    
-    
-
-
-
-
-def dif_check(x):
-    
-    flag=False
-    
-    if x[0]>75:
-        flag=True
-    if x[1]>69:
-        flag=True
-    if x[2]>0.24:
-        flag=True
-        
-    return flag
-
 
 
 
@@ -262,47 +242,36 @@ class founder():
 def Found_synthesis(x):
     
     S=founder(x)
-    
-    S.zero_visual()
-    
-    if dif_check(S.dif):
-        print('')
-        print('Try to optimize:')
-        print('')
         
         
-        S.poisk()
-        result=S.result
+    S.poisk()
+    result=S.result
         
-        if S.zs:
-            source='ZrOCl2*8H2O'
-        else:
-            source='ZrCl4'
     
-        print ('Zr source: ', source)
-        print ('[Zr], M: ', result[0])
-        print('[BDC], M:', result[1])
+    print ('Zr source: ', source)
+    print ('[Zr], M: ', result[0])
+    print('[BDC], M:', result[1])
     
-        print('Modulator: ', S.md.to_numpy()[0])
-        print('[Mod]:[Zr] ratio:', result[2])
-        print('[H2O]:[Zr] ratio:', result[3])
+    print('Modulator: ', S.md.to_numpy()[0])
+    print('[Mod]:[Zr] ratio:', result[2])
+    print('[H2O]:[Zr] ratio:', result[3])
     
-        print('Aging, h:', result[4])
-        print('Temperature:', round(result[5]))
-        print('Time: ', round(result[9]))
+    print('Aging, h:', result[4])
+    print('Temperature:', round(result[5]))
+    print('Time: ', round(result[9]))
     
-        print('Number of DMF washes: ', round(result[6]))
-        print('Total number of washes: ', round(result[7]))
-        print('Activation temperature: ', round(result[8]))
-        print('Activation time: ', round(result[9]))
+    print('Number of DMF washes: ', round(result[6]))
+    print('Total number of washes: ', round(result[7]))
+    print('Activation temperature: ', round(result[8]))
+    print('Activation time: ', round(result[9]))
         
         
-        asd=x_into_asd(result,S.md,S.ls,S.zs)
-        print('')
-        print('Oprimized properties:')
-        print('Area: ',round(asd[0]), 'm2/g')
-        print('Size: ', round(asd[1]), 'nm')
-        print('BDC to Zr6 ratio: ', round(asd[2],2))
+    asd=x_into_asd(result,S.md,S.ls,S.zs)
+    print('')
+    print('Oprimized properties:')
+    print('Area: ',round(asd[0]), 'm2/g')
+    print('Size: ', round(asd[1]), 'nm')
+    print('BDC to Zr6 ratio: ', round(asd[2],2))
     
 
 
