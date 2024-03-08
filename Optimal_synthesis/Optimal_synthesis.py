@@ -213,7 +213,6 @@ def Found_synthesis(x):
     result=S.result
         
     
-    print ('Zr source: ', source)
     print ('[Zr], M: ', result[0])
     print('[BDC], M:', result[1])
     
@@ -227,6 +226,7 @@ def Found_synthesis(x):
     
     print('Number of DMF washes: ', round(result[6]))
     print('Total number of washes: ', round(result[7]))
+    print('Last solvent in pores: ', S.ls.to_numpy()[0])
     print('Activation temperature: ', round(result[8]))
     print('Activation time: ', round(result[9]))
         
